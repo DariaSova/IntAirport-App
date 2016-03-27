@@ -3,7 +3,7 @@ require 'sqlite3'
 db = SQLite3::Database.new( "Airport.db" )
 
 # Create a database
-rows = db.execute <<-SQL
+db.execute <<-SQL
 create table numbers (
   name varchar(30),
   val int

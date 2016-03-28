@@ -27,7 +27,6 @@ CREATE TABLE IF NOT EXISTS IncomingRoutes(
   PRIMARY KEY (route_number, airline_code)
 );
 
-/*Note: not sure if we want Gate to have ON DELETE CASCADE*/
 CREATE TABLE IF NOT EXISTS Departures(
   id INT PRIMARY KEY,
   gate VARCHAR(10),
@@ -63,9 +62,17 @@ CREATE TABLE OperatedBy(
 );
 
 CREATE TABLE OutgoingDepartures(
+  departure_id INT REFERENCES Departures(id) ON DELETE CASCADE,
+  FOREIGN KEY(route_number, airline_code) 
+  REFERENCES OutgoingRoutes(route_number, airline_code) ON DELETE CASCADE,
+  PRIMARY KEY(departure_id, route_number, airline_code)
 );
 
 CREATE TABLE IncomingArrivals(
+  arrival_id INT REFERENCES Arrivals(id) ON DELETE CASCADE,
+  FOREIGN KEY(route_number, airline_code)
+  REFERENCES IncomingRoutes(route_number, airline_code) ON DELETE CASCADE,
+  PRIMARY KEY(arrival_id, route_number, airline_code)
 );
 
 CREATE TABLE PassengersArrivals(

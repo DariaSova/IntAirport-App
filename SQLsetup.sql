@@ -14,6 +14,7 @@ CREATE TABLE IF NOT EXISTS Routes(
 CREATE TABLE IF NOT EXISTS OutgoingRoutes(
   destination VARCHAR(30),
   out_time DATE 
+  departure_id INT REFERENCES Departures(id),
   airline_code INT REFERENCES Airlines(code) ON DELETE CASCADE,
   route_number INT REFERENCES Routes(route_number) ON DELETE CASCADE,
   PRIMARY KEY (route_number, airline_code)
@@ -22,6 +23,7 @@ CREATE TABLE IF NOT EXISTS OutgoingRoutes(
 CREATE TABLE IF NOT EXISTS IncomingRoutes(
   came_from VARCHAR(30),
   inc_time DATE 
+  arrival_id INT REFERENCES Arrivals(id),
   airline_code INT REFERENCES Airlines(code) ON DELETE CASCADE,
   route_number INT REFERENCES Routes(route_number) ON DELETE CASCADE,
   PRIMARY KEY (route_number, airline_code)
@@ -34,9 +36,9 @@ CREATE TABLE IF NOT EXISTS Departures(
 );
 
 CREATE TABLE IF NOT EXISTS Arrivals(
-  id INT,
-  arr_time DATE, 
-  gate VARCHAR(10)
+  id INT PRIMARY KEY,
+  gate VARCHAR(10),
+  arr_time DATE
 );
 
 CREATE TABLE IF NOT EXISTS Passengers(

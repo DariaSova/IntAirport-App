@@ -51,3 +51,19 @@ CREATE TABLE IF NOT EXISTS Baggage(
   id INT PRIMARY KEY,
   weight INT
 );
+
+--junction tables
+CREATE TABLE OperatedBy(
+);
+
+CREATE TABLE OutgoingDepartures(
+);
+
+CREATE TABLE IncomingArrivals(
+);
+
+CREATE TABLE PassangersArrivals(
+);
+
+CREATE TABLE PassangersDepartues(
+);

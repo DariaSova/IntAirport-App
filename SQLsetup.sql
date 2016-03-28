@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS IncomingRoutes(
 /*Note: not sure if we want Gate to have ON DELETE CASCADE*/
 CREATE TABLE IF NOT EXISTS Departures(
   id INT PRIMARY KEY,
-  gate VARCHAR(10) REFERENCES Gates(gate) ON DELETE CASCADE,
+  gate VARCHAR(10),
   dep_time DATE,
   FOREIGN KEY (route_number, airline_code)
   REFERENCES OutgoingRoutes(route_number, airline_code) ON DELETE CASCADE
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS Departures(
 
 CREATE TABLE IF NOT EXISTS Arrivals(
   id INT PRIMARY KEY,
-  gate VARCHAR(10) REFERENCES Gates(gate) ON DELETE CASCADE,
+  gate VARCHAR(10),
   arr_time DATE,
   FOREIGN KEY (route_number, airline_code)
   REFERENCES IncomingRoutes(route_number, airline_code) ON DELETE CASCADE
@@ -56,11 +56,6 @@ CREATE TABLE IF NOT EXISTS Baggage(
   id INT PRIMARY KEY,
   weight INT,
   passenger_id REFERENCES Passengers(id) ON DELETE CASCADE
-);
-
-CREATE TABLE IF NOT EXISTS Gates(
-  gate VARCHAR(10),
-  is_free INT
 );
 
 --junction tables

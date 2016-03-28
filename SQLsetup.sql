@@ -74,7 +74,13 @@ CREATE TABLE IncomingArrivals(
 );
 
 CREATE TABLE PassengersArrivals(
+  passenger_id INT REFERENCES Passengers(id) ON DELETE CASCADE,
+  arrival_id INT REFERENCES Arrivals(id) ON DELETE CASCADE,
+  PRIMARY KEY(passenger_id, arrival_id)
 );
 
 CREATE TABLE PassengersDepartures(
+  passenger_id INT REFERENCES Passengers(id) ON DELETE CASCADE,
+  departure_id INT REFERENCES Departures(id) ON DELETE CASCADE,
+  PRIMARY KEY(passenger_id, departure_id)
 );

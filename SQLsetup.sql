@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS Airlines(
   name VARCHAR(30),
   code VARCHAR(30) PRIMARY KEY,
-  website VARCHAR(255),
+  website VARCHAR(255)
 );
 
 CREATE TABLE IF NOT EXISTS Routes(
@@ -39,17 +39,22 @@ CREATE TABLE IF NOT EXISTS Arrivals(
   gate VARCHAR(10)
 );
 
-CREATE TABLE IF NOT EXISTS Passangers(
+CREATE TABLE IF NOT EXISTS Passengers(
   id INT PRIMARY KEY,
   name VARCHAR(30),
   date_of_birth DATE,
   place_of_birth VARCHAR(50),
-  gov_issued_id VARCHAR(50), 
+  gov_issued_id VARCHAR(50)
 );
 
 CREATE TABLE IF NOT EXISTS Baggage(
   id INT PRIMARY KEY,
   weight INT
+);
+
+CREATE TABLE IF NOT EXISTS Gates(
+  gate VARCHAR(10),
+  is_free INT
 );
 
 --junction tables
@@ -62,8 +67,8 @@ CREATE TABLE OutgoingDepartures(
 CREATE TABLE IncomingArrivals(
 );
 
-CREATE TABLE PassangersArrivals(
+CREATE TABLE PassengersArrivals(
 );
 
-CREATE TABLE PassangersDepartues(
+CREATE TABLE PassengersDepartures(
 );

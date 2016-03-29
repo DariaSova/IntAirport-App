@@ -6,89 +6,91 @@ Airlines:
 	  code		:
 	  website	:
 Routes:
-	- route_number	: 
-	  plane_model	:
-	  airline_code	:
+	- route_number	: 100
+	  plane_model	: 'Boeing 777 Passenger'
+	  airline_code	: 264915620
 	- route_number	:
 	  plane_model	:
 	  airline_code	:
 OutgoingRoutes:
-	- destination	:
+	- destination	: 'New York'
 	  out_time		:
-	  airline_code	:
-	  route_number	:
+	  airline_code	: 264915620
+	  route_number	: 100
 	- destination	:
 	  out_time		:
 	  airline_code	:
 	  route_number	:
 IncomingRoutes:
-	- came_from		:
+	- came_from		: 'Vancouver'
 	  inc_time		:
-	  airline_code	:
-	  route_number	:
+	  airline_code	: 264915620
+	  route_number	: 100
 	- came_from		:
 	  inc_time		:
 	  airline_code	:
 	  route_number	:
 Departures:
+	- id			: 456565656
+	  gate			: 9
+	  route_number	: 100
+	  dep_time		: '2012-06-05T15:10:00.000Z'
+	  airline_code	: 264915620
 	- id			:
 	  gate			:
 	  route_number	:
 	  dep_time		:
-	- id			:
-	  gate			:
-	  route_number	:
-	  dep_time		:
-Arrivals:
-	- id			:
-	  gate			:
-	  arr_time		:
-	  route_number	:
 	  airline_code	:
+Arrivals:
+	- id			: 123232323
+	  gate			: 7
+	  arr_time		: '2012-06-05T22:10:00.000Z'
+	  route_number	: 100
+	  airline_code	: 264915620
 	- id			:
 	  gate			:
 	  arr_time		:
 	  route_number	:
 	  airline_code	:
 Passengers:
-	- id				:
-	  name				:
-	  date_of_birth		:
-	  place_of_birth	:
-	  gov_issued_id		:
+	- id				: 161616169
+	  name				: 'Mary Sue'
+	  date_of_birth		: 
+	  place_of_birth	: 'Idaho'
+	  gov_issued_id		: 'Passport'
 	- id				:
 	  name				:
 	  date_of_birth		:
 	  place_of_birth	:
 	  gov_issued_id		:
 Baggage:
-	- id			:
-	  weight		:
-	  passenger_id	:
+	- id			: 234343434
+	  weight		: 20
+	  passenger_id	: 161616169
 	- id			:
 	  weight		:
 	  passenger_id	:
 OutgoingDepartures:
-	- departure_id	:
-	  route_number	:
-	  airline_code	:
+	- departure_id	: 456565656
+	  route_number	: 100
+	  airline_code	: 264915620
 	- departure_id	:
 	  route_number	:
 	  airline_code	:
 IncomingArrivals:
-	- arrival_id	:
-	  route_number	:
-	  airline_code	:
+	- arrival_id	: 123232323
+	  route_number	: 100
+	  airline_code	: 264915620
 	- arrival_id	:
 	  route_number	:
 	  airline_code	:
 PassengersArrivals:
-	- passenger_id	:
-	  arrival_id	:
+	- passenger_id	: 161616169
+	  arrival_id	: 123232323
 	- passenger_id	:
 	  arrival_id	:
 PassengersDepartures:
-	- passenger_id	:
-	  departure_id	:
+	- passenger_id	: 161616169
+	  departure_id	: 456565656
 	- passenger_id	:
 	  departure_id	:

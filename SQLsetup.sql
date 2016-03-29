@@ -52,7 +52,9 @@ CREATE TABLE IF NOT EXISTS Passengers(
   name VARCHAR(30),
   date_of_birth DATE,
   place_of_birth VARCHAR(50),
-  gov_issued_id VARCHAR(50)
+  gov_issued_id VARCHAR(50),
+  arr_ID INT REFERENCES Arrivals(id) ON DELETE CASCADE,
+  dep_ID INT REFERENCES Departures(id) ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS Baggage(

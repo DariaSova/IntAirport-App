@@ -1,0 +1,94 @@
+Airlines:
+	- name		: 'American Airlines'
+	  code		: 264915620
+	  website	: www.aa.com
+	- name		:
+	  code		:
+	  website	:
+Routes:
+	- route_number	: 
+	  plane_model	:
+	  airline_code	:
+	- route_number	:
+	  plane_model	:
+	  airline_code	:
+OutgoingRoutes:
+	- destination	:
+	  out_time		:
+	  airline_code	:
+	  route_number	:
+	- destination	:
+	  out_time		:
+	  airline_code	:
+	  route_number	:
+IncomingRoutes:
+	- came_from		:
+	  inc_time		:
+	  airline_code	:
+	  route_number	:
+	- came_from		:
+	  inc_time		:
+	  airline_code	:
+	  route_number	:
+Departures:
+	- id			:
+	  gate			:
+	  route_number	:
+	  dep_time		:
+	- id			:
+	  gate			:
+	  route_number	:
+	  dep_time		:
+Arrivals:
+	- id			:
+	  gate			:
+	  arr_time		:
+	  route_number	:
+	  airline_code	:
+	- id			:
+	  gate			:
+	  arr_time		:
+	  route_number	:
+	  airline_code	:
+Passengers:
+	- id				:
+	  name				:
+	  date_of_birth		:
+	  place_of_birth	:
+	  gov_issued_id		:
+	- id				:
+	  name				:
+	  date_of_birth		:
+	  place_of_birth	:
+	  gov_issued_id		:
+Baggage:
+	- id			:
+	  weight		:
+	  passenger_id	:
+	- id			:
+	  weight		:
+	  passenger_id	:
+OutgoingDepartures:
+	- departure_id	:
+	  route_number	:
+	  airline_code	:
+	- departure_id	:
+	  route_number	:
+	  airline_code	:
+IncomingArrivals:
+	- arrival_id	:
+	  route_number	:
+	  airline_code	:
+	- arrival_id	:
+	  route_number	:
+	  airline_code	:
+PassengersArrivals:
+	- passenger_id	:
+	  arrival_id	:
+	- passenger_id	:
+	  arrival_id	:
+PassengersDepartures:
+	- passenger_id	:
+	  departure_id	:
+	- passenger_id	:
+	  departure_id	:

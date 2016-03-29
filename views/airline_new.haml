@@ -1,0 +1,12 @@
+%h1 Add new Airline
+%p
+  Please enter your data below
+  %form{ action: "/airline", method: "post" }
+    %fieldset
+      %label{ for: "name" } Name:
+      %input{ type: "text" }
+      %label{ for: "code" } Code:
+      %input{ type: "text" }
+      %label{ for: "website" } Website:
+      %input{ type: "text" }
+      %input{ type: "submit", value: "Add Airline" }

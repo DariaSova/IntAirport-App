@@ -61,4 +61,4 @@ CREATE TABLE IF NOT EXISTS Baggage(
   id INT PRIMARY KEY,
   weight INT,
   passenger_id REFERENCES Passengers(id) ON DELETE CASCADE
-);
+)

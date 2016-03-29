@@ -60,37 +60,3 @@ CREATE TABLE IF NOT EXISTS Baggage(
   weight INT,
   passenger_id REFERENCES Passengers(id) ON DELETE CASCADE
 );
-
---junction tables
-CREATE TABLE OperatedBy(
-);
-
-CREATE TABLE OutgoingDepartures(
-  departure_id INT REFERENCES Departures(id) ON DELETE CASCADE,
-  route_number INT,
-  airline_code INT,
-  FOREIGN KEY(route_number, airline_code) 
-  REFERENCES OutgoingRoutes(route_number, airline_code) ON DELETE CASCADE,
-  PRIMARY KEY(departure_id, route_number, airline_code)
-);
-
-CREATE TABLE IncomingArrivals(
-  arrival_id INT REFERENCES Arrivals(id) ON DELETE CASCADE,
-  route_number INT,
-  airline_code INT,
-  FOREIGN KEY(route_number, airline_code)
-  REFERENCES IncomingRoutes(route_number, airline_code) ON DELETE CASCADE,
-  PRIMARY KEY(arrival_id, route_number, airline_code)
-);
-
-CREATE TABLE PassengersArrivals(
-  passenger_id INT REFERENCES Passengers(id) ON DELETE CASCADE,
-  arrival_id INT REFERENCES Arrivals(id) ON DELETE CASCADE,
-  PRIMARY KEY(passenger_id, arrival_id)
-);
-
-CREATE TABLE PassengersDepartures(
-  passenger_id INT REFERENCES Passengers(id) ON DELETE CASCADE,
-  departure_id INT REFERENCES Departures(id) ON DELETE CASCADE,
-  PRIMARY KEY(passenger_id, departure_id)
-);

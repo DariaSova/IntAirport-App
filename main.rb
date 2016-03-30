@@ -37,10 +37,11 @@ get '/flight-done' do
 end
 
 post '/show-flight-done' do
+  haml :show_flights_done
 end
 
 get '/flight-passengers' do
-    haml :flight_passengers
+  haml :flight_passengers
 end
 
 post '/show-flight-passengers' do

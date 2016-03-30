@@ -1,0 +1,18 @@
+%h1 Add new Route
+%p
+  Please enter your data below
+  %form{ action: "/route", method: "post" }
+    %fieldset
+      %label{ for: "IncomingRoutes or OutgoingRoutes" } Type:
+      %input{ type: "text", name: "type" }
+      %label{ for: "Route Number" } Route_num:
+      %input{ type: "text", name: "route_num" }
+      %label{ for: "Plane Model" } Model:
+      %input{ type: "text", name: "model" }
+      %label{ for: "Airline Code" } Code:
+      %input{ type: "text", name: "code" }
+      %label{ for: "City" } City:
+      %input{ type: "text", name: "city" }
+      %label{ for: "Time" } Time:
+      %input{ type: "text", name: "time" }
+      %input{ type: "submit", value: "Add Route", class: "btn btn-default" }

@@ -1,2 +1,5 @@
 %h2 All routes that going to/from #{params[:city]}
-= get_routes_for_city(params[:city])
+= print(get_routes_for_city(params[:city]))
+- @result = get_routes_for_city(params[:city])
+- @result.each do |r|
+  %p #{r[0]}

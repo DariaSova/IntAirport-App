@@ -52,3 +52,10 @@ end
 
 post '/show-passenger-baggage' do
 end
+
+get '/time-flights' do
+  haml :time_flights
+end
+
+post '/show-time-flights' do
+end

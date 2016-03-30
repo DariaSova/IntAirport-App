@@ -45,6 +45,7 @@ get '/flight-passengers' do
 end
 
 post '/show-flight-passengers' do
+  haml :show_flight_passengers
 end
 
 post '/free-gate' do

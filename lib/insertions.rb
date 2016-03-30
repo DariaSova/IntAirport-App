@@ -21,7 +21,7 @@ end
 def flight_insert(type, gate, time, route_num, code)
   db = SQLite3::Database.open "Airport.db"
   if (type == "Arrival")
-	db.execute("INSERT INTO Arrivals VALUES(?, ?, ?, ?, ?)", [SecureRandom.uuid, gate, time, route_num, code]);
+	db.execute("INSERT INTO Arrivals VALUES(?, ?, ?, ?, ?, ?)", [SecureRandom.uuid, gate, time, route_num, code, "In Progress"]);
   else 
 	db.execute("INSERT INTO Departures VALUES(?, ?, ?, ?, ?)", [SecureRandom.uuid, gate, time, route_num, code]);
   end

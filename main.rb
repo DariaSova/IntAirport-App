@@ -36,6 +36,7 @@ get '/flight-done' do
 end
 
 post '/show-flight-done' do
+	haml :show_flight_done
 end
 
 get '/flight-passengers' do

@@ -42,3 +42,6 @@ end
 
 post '/show-flight-passengers' do
 end
+
+get '/show-free-gates' do
+end

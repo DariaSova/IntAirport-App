@@ -1,6 +1,7 @@
 require 'sinatra' 
 require 'sqlite3'
 require_relative 'lib/insertions.rb'
+require_relative 'lib/other.rb'
 require 'pry'
 
 get '/' do 
@@ -20,30 +21,39 @@ get '/airline-routes' do
 end
 
 post '/show-airline-routes' do
+  haml :show_airline_routes
 end
 
 get '/city-routes' do
-    haml :city_routes
+  haml :city_routes
 end
 
 post '/show-city-routes' do
+  haml :show_city_routes
 end
 
 get '/flight-done' do
-    haml :flights_done
+  haml :flights_done
 end
 
 post '/show-flight-done' do
+  haml :show_flights_done
 end
 
 get '/flight-passengers' do
-    haml :flight_passengers
+  haml :flight_passengers
 end
 
 post '/show-flight-passengers' do
+  haml :show_flight_passengers
 end
 
-get '/show-free-gates' do
+post '/free-gate' do
+  haml :show_free_gate
+end
+
+get '/show-free-gate' do
+  haml :free_gate
 end
 
 get '/passenger-baggage' do
@@ -51,6 +61,7 @@ get '/passenger-baggage' do
 end
 
 post '/show-passenger-baggage' do
+  haml :show_passenger_baggage
 end
 
 get '/time-flights' do
@@ -58,6 +69,7 @@ get '/time-flights' do
 end
 
 post '/show-time-flights' do
+  haml :show_time_flights
 end
 
 get '/route-new' do
@@ -75,5 +87,3 @@ end
 post '/flight' do
   haml :flight_added
 end
-
-

@@ -1,4 +1,17 @@
 body{
   background-image: url('../images/airplane.jpg');
   background-opacity: 0.9;
+  background-size: cover;
+}
+
+#header {
+  top: 10%;
+  position: relative;
+  font-size: 250%;
+}
+
+#content {
+  position: relative;
+  width: 80%;
+  left: 3%;
 }

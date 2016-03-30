@@ -1,13 +1,16 @@
 require 'sinatra' 
 require 'sqlite3'
+require_relative 'lib/insertions.rb'
+require 'pry'
 
 get '/' do 
-  str = "Welcome to the Airport!" 
+  haml :index
+end
 
-  db = SQLite3::Database.open "Airport.db"
-  db.execute( "select * from numbers" ) do |row|
-    str+=row[0]
-  end
-  db.close
-  str 
+get '/airline-new' do
+  haml :airline_new
+end
+
+post '/airline' do
+  haml :airline_added
 end

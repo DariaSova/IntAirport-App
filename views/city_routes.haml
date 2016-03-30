@@ -1,0 +1,8 @@
+%h1 Find routes to and from City
+%p
+  Please enter your data below
+  %form{ action: "/city_routes", method: "post" }
+    %fieldset
+      %label{ for: "City" } City:
+      %input{ type: "text", name: "city" }
+      %input{ type: "submit", value: "Find Routes", class: "btn btn-default" }

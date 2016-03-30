@@ -35,3 +35,10 @@ end
 
 post '/show-flight-done' do
 end
+
+get '/flight-passengers' do
+    haml :flight_passengers
+end
+
+post '/show-flight-passengers' do
+end

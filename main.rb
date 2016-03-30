@@ -1,6 +1,7 @@
 require 'sinatra' 
 require 'sqlite3'
 require_relative 'lib/insertions.rb'
+require_relative 'lib/other.rb'
 require 'pry'
 
 get '/' do 

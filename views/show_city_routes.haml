@@ -1,5 +1,9 @@
 %h2 All routes that going to/from #{params[:city]}
-= print(get_routes_for_city(params[:city]))
-- @result = get_routes_for_city(params[:city])
-- @result.each do |r|
-  %p #{r[0]}
+%table{:border => "1", class: "table table-striped"}
+  %tbody
+    %tr 
+      %td Route ID
+    - @result = get_routes_for_city(params[:city])
+    %tr 
+    - @result.each do |r|
+      %td #{r[0]}

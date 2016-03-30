@@ -44,7 +44,7 @@ end
 
 def get_passengers(flight)
   db = SQLite3::Database.open "Airport.db"
-  resul = tdb.execute("SELECT p.id, p.name, p.date_of_birth, p.place_of_birth, p.gov_issued_id
+  result = db.execute("SELECT p.id, p.name, p.date_of_birth, p.place_of_birth, p.gov_issued_id
     FROM Passengers p
     WHERE p.arr_ID = ? OR p.dep_ID = ?", flight, flight);
   db.close if db
@@ -53,7 +53,7 @@ end
 
 def get_baggage(passenger_id)
   db = SQLite3::Database.open "Airport.db"
-  resul = tdb.execute("SELECT id FROM Baggage WHERE passenger_id = ?", passenger_id);
+  result = db.execute("SELECT id FROM Baggage WHERE passenger_id = ?", passenger_id);
   db.close if db
   result
 end

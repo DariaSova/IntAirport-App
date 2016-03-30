@@ -1,5 +1,6 @@
 require 'sinatra' 
 require 'sqlite3'
+require_relative 'lib/insertions.rb'
 require 'pry'
 
 get '/' do 
@@ -11,5 +12,5 @@ get '/airline-new' do
 end
 
 post '/airline' do
-  params[:name]
+  haml :airline_added
 end

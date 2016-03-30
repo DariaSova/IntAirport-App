@@ -1,0 +1,8 @@
+%h1 Find all arrivals and departures around a certain time
+%p
+  Please enter the time below
+  %form{ action: "/show-time-flights", method: "post" }
+    %fieldset
+      %label{ for: "Time" } Time:
+      %input{ type: "text", name: "time" }
+      %input{ type: "submit", value: "Find Flights", class: "btn btn-default" }

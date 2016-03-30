@@ -13,8 +13,6 @@ end
 
 post '/airline' do
   haml :airline_added
-<<<<<<< HEAD
-=======
 end
 
 get '/airline-routes' do
@@ -60,7 +58,6 @@ get '/time-flights' do
 end
 
 post '/show-time-flights' do
->>>>>>> origin/master
 end
 
 get '/route-new' do
@@ -69,6 +66,14 @@ end
 
 post '/route' do
   haml :route_added
+end
+
+get '/flight-new' do
+  haml :flight_new
+end
+
+post '/flight' do
+  haml :flight_added
 end
 
 

@@ -19,7 +19,7 @@ def get_routes_for_city(city)
 	UNION ALL
 	SELECT route_number
 	FROM IncomingRoutes
-	WHERE source = ?
+	WHERE came_from = ?
 	)", city, city);
   db.close if db
 end

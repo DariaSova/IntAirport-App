@@ -25,14 +25,15 @@ post '/show-airline-routes' do
 end
 
 get '/city-routes' do
-    haml :city_routes
+  haml :city_routes
 end
 
 post '/show-city-routes' do
+  haml :show_city_routes
 end
 
 get '/flight-done' do
-    haml :flights_done
+  haml :flights_done
 end
 
 post '/show-flight-done' do

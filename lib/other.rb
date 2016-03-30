@@ -74,7 +74,7 @@ def mark_flight_as_done(flight)
 	WHERE flights.id = ?
   )
   UPDATE <ARRIVALS OR DEPARTURES>
-  SET status = "done"
+  SET status = 'done'
   WHERE id= ?", flight, flight);
 db.execute("SELECT gate
   FROM <ARRIVALS OR DEPARTURES>

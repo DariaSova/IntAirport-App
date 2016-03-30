@@ -21,6 +21,7 @@ get '/airline-routes' do
 end
 
 post '/show-airline-routes' do
+  haml :show_airline_routes
 end
 
 get '/city-routes' do

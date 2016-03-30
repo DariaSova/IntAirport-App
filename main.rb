@@ -14,3 +14,13 @@ end
 post '/airline' do
   haml :airline_added
 end
+
+get '/route-new' do
+  haml :route_new
+end
+
+post '/route' do
+  haml :route_added
+end
+
+

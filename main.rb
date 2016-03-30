@@ -21,3 +21,10 @@ end
 
 post '/show-airline-routes' do
 end
+
+get '/city-routes' do
+    haml :city_routes
+end
+
+post '/show-city-routes' do
+end

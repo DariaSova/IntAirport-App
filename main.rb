@@ -61,6 +61,7 @@ get '/time-flights' do
 end
 
 post '/show-time-flights' do
+  haml :show_time_flights
 end
 
 get '/route-new' do

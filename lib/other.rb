@@ -30,11 +30,11 @@ def get_flights_for_date(date)
     FROM (
 	SELECT id
 	FROM Departures
-	WHERE 24*ABS(dep_Time - to_date(?, 'YYYY-MM-DD hh24:mi') ) <= 1
+	WHERE 24*ABS(dep_Time - date(?, 'YYYY-MM-DD hh24:mi') ) <= 1
 	UNION ALL
 	SELECT id
 	FROM Arrivals
-	WHERE 24*ABS(arr_Time - to_date(?, 'YYYY-MM-DD hh24:mi') ) <= 1	
+	WHERE 24*ABS(arr_Time - date(?, 'YYYY-MM-DD hh24:mi') ) <= 1
 )", date, date);
   db.close if db
 end

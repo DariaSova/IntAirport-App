@@ -28,3 +28,10 @@ end
 
 post '/show-city-routes' do
 end
+
+get '/flight-done' do
+    haml :flights_done
+end
+
+post '/show-flight-done' do
+end

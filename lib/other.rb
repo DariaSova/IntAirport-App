@@ -47,22 +47,15 @@ def get_passengers(flight)
   db.close if db
 end
 
-def get_baggage(passanger_id)
+def get_baggage(passenger_id)
   db = SQLite3::Database.open "Airport.db"
-  db.execute("SELECT id
-FROM Baggage
-WHERE passenger_id = ?", passanger_id);
+  db.execute("SELECT id FROM Baggage WHERE passenger_id = ?", passenger_id);
   db.close if db
 end
 
 def get_free_gate
   db = SQLite3::Database.open "Airport.db"
-  db.execute("SELECT * FROM (
-	SELECT id 
-	FROM Gates
-	WHERE status = 0
-) 
-WHERE ROWNUM <= 1;");
+  db.execute("SELECT id FROM Gates WHERE status = 0 ORDER BY ROWID ASC LIMIT 1;");
   db.close if db
 end
 

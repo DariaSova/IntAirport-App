@@ -46,7 +46,12 @@ end
 post '/show-flight-passengers' do
 end
 
-get '/show-free-gates' do
+post '/free-gate' do
+  haml :show_free_gate
+end
+
+get '/show-free-gate' do
+  haml :free_gate
 end
 
 get '/passenger-baggage' do
@@ -80,5 +85,3 @@ end
 post '/flight' do
   haml :flight_added
 end
-
-

@@ -1,2 +1,4 @@
 %h2 Free gate for flight
-= get_free_gate()
+-@result = get_free_gate()
+- @result.each do |r|
+  %h3 Free Gate:  #{r[0]}

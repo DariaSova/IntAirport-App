@@ -28,7 +28,7 @@ end
 
 def get_flights_for_date(date)
   db = SQLite3::Database.open "Airport.db"
-  resul = tdb.execute("SELECT id
+  result = db.execute("SELECT id
     FROM (
 	SELECT id
 	FROM Departures

@@ -88,3 +88,10 @@ post '/flight' do
   haml :flight_added
 end
 
+get '/delete-route' do
+  haml :delete_route
+end
+
+post '/show-delete-route' do
+  haml :show_delete_route
+end

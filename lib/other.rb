@@ -65,3 +65,9 @@ def mark_flight_as_done(flight)
   db.execute("SELECT gate FROM Arrivals WHERE id = ?", flight);
   db.close if db
 end
+
+def delete_route(route_number)
+  db = SQLite3::Database.open "Airport.db"
+  db.execute("DELETE FROM Routes WHERE route_number = ?", route_number);
+  db.close if db
+end

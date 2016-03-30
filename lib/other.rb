@@ -19,7 +19,11 @@ def get_routes_for_city(city)
 	UNION ALL
 	SELECT route_number
 	FROM IncomingRoutes
+<<<<<<< HEAD
+	WHERE source = ?
+=======
 	WHERE came_from = ?
+>>>>>>> origin/master
 	)", city, city);
   db.close if db
 end
@@ -61,16 +65,7 @@ end
 
 def mark_flight_as_done(flight)
   db = SQLite3::Database.open "Airport.db"
-  db.execute("With flight AS(
-	SELECT id 
-	FROM <ARRIVALS OR DEPARTURES> flights
-	WHERE flights.id = ?
-  )
-  UPDATE <ARRIVALS OR DEPARTURES>
-  SET status = 'done'
-  WHERE id= ?", flight, flight);
-db.execute("SELECT gate
-  FROM <ARRIVALS OR DEPARTURES>
-  WHERE id = flight.gate");
+  db.execute("UPDATE Arrivals SET status = 'done' WHERE id= ?", flight);
+  db.execute("SELECT gate FROM Arrivals WHERE id = ?", flight);
   db.close if db
 end

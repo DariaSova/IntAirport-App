@@ -43,6 +43,7 @@ CREATE TABLE IF NOT EXISTS Arrivals(
   arr_time DATE,
   route_number INT,
   airline_code INT,
+  status VARCHAR(20),
   FOREIGN KEY (route_number, airline_code)
   REFERENCES IncomingRoutes(route_number, airline_code) ON DELETE CASCADE
 );

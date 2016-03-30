@@ -37,7 +37,7 @@ get '/flight-done' do
 end
 
 post '/show-flight-done' do
-  haml :show_flights_done
+	haml :show_flight_done
 end
 
 get '/flight-passengers' do
@@ -87,3 +87,4 @@ end
 post '/flight' do
   haml :flight_added
 end
+

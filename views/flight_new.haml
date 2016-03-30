@@ -1,0 +1,16 @@
+%h1 Add new Flight
+%p
+  Please enter your data below
+  %form{ action: "/flight", method: "post" }
+    %fieldset
+      %label{ for: "Arrivals or Departures" } Type:
+      %input{ type: "text", name: "type" }
+      %label{ for: "Gate" } Gate:
+      %input{ type: "text", name: "gate" }
+      %label{ for: "Time" } Time:
+      %input{ type: "text", name: "time" }
+      %label{ for: "Route Number" } Route_num:
+      %input{ type: "text", name: "route_num" }
+      %label{ for: "Airline Code" } Code:
+      %input{ type: "text", name: "code" }
+      %input{ type: "submit", value: "Add Flight", class: "btn btn-default" }

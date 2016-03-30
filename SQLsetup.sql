@@ -1,3 +1,4 @@
+
 CREATE TABLE IF NOT EXISTS Airlines(
   name VARCHAR(30),
   code VARCHAR(30) PRIMARY KEY,

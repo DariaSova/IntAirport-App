@@ -1,7 +1,7 @@
 %h1 Find routes operated by airline
 %p
-  Please enter your data below
-  %form{ action: "/airline_routes", method: "post" }
+  Please enter the airline code below
+  %form{ action: "/show-airline-routes", method: "post" }
     %fieldset
       %label{ for: "airline_code" } Code:
       %input{ type: "text", name: "code" }

@@ -61,11 +61,11 @@ CREATE TABLE IF NOT EXISTS Baggage(
   id VARCHAR(50) PRIMARY KEY,
   weight INT,
   passenger_id VARCHAR(50) REFERENCES Passengers(id) ON DELETE CASCADE
-)
+);
 
 
 
 CREATE TABLE IF NOT EXISTS Gates(
   id VARCHAR(50) PRIMARY KEY,
   status INT
-);
+)

@@ -45,3 +45,10 @@ end
 
 get '/show-free-gates' do
 end
+
+get '/passenger-baggage' do
+  haml :passenger_baggage
+end
+
+post '/show-passenger-baggage' do
+end

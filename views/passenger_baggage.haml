@@ -1,8 +1,8 @@
 %h1 Find a passenger's baggage
 %p
-  Please enter your data below
-  %form{ action: "/passenger_baggage", method: "post" }
+  Please enter passanger's ID below
+  %form{ action: "/show-passenger-baggage", method: "post" }
     %fieldset
-      %label{ for: "Passenger Id" } Id:
+      %label{ for: "Passenger Id" } Passanger Id:
       %input{ type: "text", name: "id" }
       %input{ type: "submit", value: "Find Baggage", class: "btn btn-default" }

@@ -1,0 +1,8 @@
+%h1 Find all passengers on a flight
+%p
+  Please enter your data below
+  %form{ action: "/flight_passengers", method: "post" }
+    %fieldset
+      %label{ for: "Flight ID" } ID:
+      %input{ type: "text", name: "id" }
+      %input{ type: "submit", value: "Find Passengers", class: "btn btn-default" }

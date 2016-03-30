@@ -1,0 +1,10 @@
+%h1 Assign a flight as "done" and get the gate
+%p
+  Please enter your data below
+  %form{ action: "/flight_done", method: "post" }
+    %fieldset
+      %label{ for: "Flight Id" } Id:
+      %input{ type: "text", name: "id" }
+	  %label{ for: "Departure or Arrival?" } Type:
+      %input{ type: "text", name: "type" }
+      %input{ type: "submit", value: "Set Flight", class: "btn btn-default" }

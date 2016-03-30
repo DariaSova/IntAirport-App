@@ -1,2 +1,9 @@
 %h2 All flights around #{params[:time]} time
-= get_flights_for_date(params[:time])
+%table{:border => "1", class: "table table-striped"}
+  %tbody
+    %tr
+      %td Flight ID
+    - @result = get_flights_for_date(params[:time])
+    %tr
+    - @result.each do |r|
+      %td #{r[0]}

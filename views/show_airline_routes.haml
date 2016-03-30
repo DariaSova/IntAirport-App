@@ -1,2 +1,9 @@
 %h2 All routes that are operated by #{params[:name]}
-= get_routes_for_airline(params[:name])
+%table{:border => "1", class: "table table-striped"}
+  %tbody
+    %tr
+      %td Route ID
+    - @result = get_routes_for_airline(params[:name])
+    %tr
+    - @result.each do |r|
+      %td #{r[0]}

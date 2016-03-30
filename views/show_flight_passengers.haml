@@ -1,2 +1,9 @@
 %h2 All passengers for the flight with ID #{params[:id]}
-= get_passengers(params[:id])
+%table{:border => "1", class: "table table-striped"}
+  %tbody
+    %tr
+      %td Flight ID
+    - @result =  get_passengers(params[:id])
+    %tr
+    - @result.each do |r|
+      %td #{r[0]}

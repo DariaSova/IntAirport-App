@@ -50,15 +50,15 @@ INSERT INTO Departures
 VALUES(4004, 7, datetime('2016-03-26 08:15'), 4, 'AS');
 
 INSERT INTO Arrivals
-VALUES(1000, 45, datetime('2016-03-30 16:00'), 3, 'AC');
+VALUES(1000, 45, datetime('2016-03-30 16:00'), 3, 'AC', 'In Progress');
 INSERT INTO Arrivals
-VALUES(1001, 70, datetime('2016-03-29 16:51'), 8, 'AC');
+VALUES(1001, 70, datetime('2016-03-29 16:51'), 8, 'AC', 'In Progress');
 INSERT INTO Arrivals
-VALUES(1002, 44, datetime('2016-03-27 17:26'), 2, 'AA');
+VALUES(1002, 44, datetime('2016-03-27 17:26'), 2, 'AA', 'In Progress');
 INSERT INTO Arrivals
-VALUES(1003, 21, datetime('2016-03-29 04:52'), 6, 'AA');
+VALUES(1003, 21, datetime('2016-03-29 04:52'), 6, 'AA', 'In Progress');
 INSERT INTO Arrivals
-VALUES(1004, 18, datetime('2016-03-29 16:11'), 4, 'AS');
+VALUES(1004, 18, datetime('2016-03-29 16:11'), 4, 'AS', 'In Progress');
 
 INSERT INTO Passengers
 VALUES(1600, 'Mary Sue', date('1990-09-05'), 'Victoria, CA', 'Passport', 1000, 4000);

@@ -26,16 +26,14 @@ end
 
 def get_flights_for_date(date)
   db = SQLite3::Database.open "Airport.db"
-  db.execute("SELECT id
-    FROM (
+  db.execute("
 	SELECT id
 	FROM Departures
-	WHERE 24*ABS(dep_Time - date(?, 'YYYY-MM-DD hh24:mi') ) <= 1
-	UNION ALL
+	WHERE 24*abs(julianday(dep_Time) - julianday(?) ) <= 1
+	UNION
 	SELECT id
 	FROM Arrivals
-	WHERE 24*ABS(arr_Time - date(?, 'YYYY-MM-DD hh24:mi') ) <= 1
-)", date, date);
+	WHERE 24*abs(julianday(arr_Time) - julianday(?) ) <= 1", date, date);
   db.close if db
 end
 
@@ -68,6 +66,11 @@ end
 
 def delete_route(route_number)
   db = SQLite3::Database.open "Airport.db"
+  db.execute("DELETE FROM Departures WHERE route_number = ?", route_number);
+  db.execute("DELETE FROM Arrivals WHERE route_number = ?", route_number);
+  db.execute("DELETE FROM IncomingRoutes WHERE route_number = ?", route_number);
+  db.execute("DELETE FROM OutgoingRoutes WHERE route_number = ?", route_number);
+  db.execute("DELETE FROM Routes WHERE route_number = ?", route_number);
   db.execute("DELETE FROM Routes WHERE route_number = ?", route_number);
   db.close if db
 end

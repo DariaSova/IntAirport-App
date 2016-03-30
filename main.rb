@@ -25,14 +25,15 @@ post '/show-airline-routes' do
 end
 
 get '/city-routes' do
-    haml :city_routes
+  haml :city_routes
 end
 
 post '/show-city-routes' do
+  haml :show_city_routes
 end
 
 get '/flight-done' do
-    haml :flights_done
+  haml :flights_done
 end
 
 post '/show-flight-done' do
@@ -40,10 +41,11 @@ post '/show-flight-done' do
 end
 
 get '/flight-passengers' do
-    haml :flight_passengers
+  haml :flight_passengers
 end
 
 post '/show-flight-passengers' do
+  haml :show_flight_passengers
 end
 
 post '/free-gate' do
@@ -67,6 +69,7 @@ get '/time-flights' do
 end
 
 post '/show-time-flights' do
+  haml :show_time_flights
 end
 
 get '/route-new' do

@@ -8,6 +8,7 @@ body{
   top: 10%;
   position: relative;
   font-size: 250%;
+  text-align: center;
 }
 
 #content {

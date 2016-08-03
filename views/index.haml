@@ -1,23 +1,35 @@
 %h1 Welcome to the Airport!
-%a(href="/airline-new")
-  %li Add Airline
-%a(href="/route-new")
-  %li Add Route
-%a(href="/flight-new")
-  %li Add Flight
-%a(href="/delete-route")
-  %li Delete Route
-%a(href="/airline-routes")
-  %li Show Routes for Airlines
-%a(href="/city-routes")
-  %li Show Routes for Cities
-%a(href="/flight-done")
-  %li Assign flight status "Done"
-%a(href="/flight-passengers")
-  %li Show passengers on a flight
-%a(href="/show-free-gate")
-  %li Find free Gates
-%a(href="/passenger-baggage")
-  %li Find passenger's baggage
-%a(href="/time-flights")
-  %li Show flights for a specific time
+.container-fluid
+  .row
+    .col-xs-4
+      General
+    .col-xs-4
+      Flights
+    .col-xs-4
+      Routes
+  .row
+    .col-xs-4
+      %a(href="/airline-new")
+        %li Add Airline
+      %a(href="/show-free-gate")
+        %li Find free Gates
+      %a(href="/passenger-baggage")
+        %li Find passenger's baggage
+    .col-xs-4
+      %a(href="/flight-new")
+        %li Add Flight
+      %a(href="/flight-done")
+        %li Assign flight status "Done"
+      %a(href="/flight-passengers")
+        %li Show passengers on a flight
+      %a(href="/time-flights")
+        %li Show flights for a specific time
+    .col-xs-4
+      %a(href="/route-new")
+        %li Add Route
+      %a(href="/delete-route")
+        %li Delete Route
+      %a(href="/airline-routes")
+        %li Show Routes for Airlines
+      %a(href="/city-routes")
+        %li Show Routes for Cities

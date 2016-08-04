@@ -2,34 +2,48 @@
 .container-fluid
   .row
     .col-xs-4
-      General
+      %h4
+        General
     .col-xs-4
-      Flights
+      %h4
+        Flights
     .col-xs-4
-      Routes
+      %h4
+        Routes
   .row
     .col-xs-4
       %a(href="/airline-new")
-        %li Add Airline
+        %li 
+          .glyphicon.glyphicon-chevron-left Add Airline
       %a(href="/show-free-gate")
-        %li Find free Gates
+        %li
+          .glyphicon.glyphicon-chevron-left Find free Gates
       %a(href="/passenger-baggage")
-        %li Find passenger's baggage
+        %li
+          .glyphicon.glyphicon-chevron-left Find passenger's baggage
     .col-xs-4
       %a(href="/flight-new")
-        %li Add Flight
+        %li
+          .glyphicon.glyphicon-chevron-left Add Flight
       %a(href="/flight-done")
-        %li Assign flight status "Done"
+        %li
+          .glyphicon.glyphicon-chevron-left Assign flight status "Done"
       %a(href="/flight-passengers")
-        %li Show passengers on a flight
+        %li
+          .glyphicon.glyphicon-chevron-left Show passengers on a flight
       %a(href="/time-flights")
-        %li Show flights for a specific time
+        %li
+          .glyphicon.glyphicon-chevron-left Show flights for a specific time
     .col-xs-4
       %a(href="/route-new")
-        %li Add Route
+        %li
+          .glyphicon.glyphicon-chevron-left Add Route
       %a(href="/delete-route")
-        %li Delete Route
+        %li
+          .glyphicon.glyphicon-chevron-left Delete Route
       %a(href="/airline-routes")
-        %li Show Routes for Airlines
+        %li
+          .glyphicon.glyphicon-chevron-left Show Routes for Airlines
       %a(href="/city-routes")
-        %li Show Routes for Cities
+        %li
+          .glyphicon.glyphicon-chevron-left Show Routes for Cities

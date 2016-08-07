@@ -1,4 +1,5 @@
 require 'sinatra' 
+require 'sinatra/content_for'
 require 'sqlite3'
 require_relative 'lib/insertions.rb'
 require_relative 'lib/other.rb'

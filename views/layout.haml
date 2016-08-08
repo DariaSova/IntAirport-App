@@ -10,11 +10,11 @@
         %img(src="/images/airplane_takeoff.png" class="logo")
         %h1.main-heading International Airport Database
       #content
-        %br
-        = yield
-        %br
         -if content_for?(:home_link)
           = yield_content :home_link
         -else
           %a(href="/")
-            Home
+            .glyphicon.glyphicon-chevron-left Back
+        %br
+        = yield
+        %br

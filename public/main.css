@@ -11,6 +11,10 @@
   left: 5%;
 }
 
+.form-container {
+  width: 45%;
+}
+
 .logo {
   width: 100px;
 }

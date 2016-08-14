@@ -1,0 +1,26 @@
+%h3 Add new Flight
+%p
+  Please enter your data below
+%form.form-container.form-horizontal{ action: "/flight", method: "post" }
+  %fieldset
+    .form-group
+      %label.col-sm-2.control-label{ for: "Arrivals or Departures" } Type:
+      .col-sm-10
+        %input.form-control{ type: "text", name: "type" }
+    .form-group
+      %label.col-sm-2.control-label{ for: "Gate" } Gate:
+      .col-sm-10
+        %input.form-control{ type: "text", name: "gate" }
+    .form-group
+      %label.col-sm-2.control-label{ for: "Time" } Time:
+      .col-sm-10
+        %input.form-control{ type: "text", name: "time" }
+    .form-group
+      %label.col-sm-2.control-label{ for: "Route Number" } Route#:
+      .col-sm-10
+        %input.form-control{ type: "text", name: "route_num" }
+    .form-group
+      %label.col-sm-2.control-label{ for: "Airline Code" } Code:
+      .col-sm-10
+        %input.form-control{ type: "text", name: "code" }
+    %input{ type: "submit", value: "Add Flight", class: "btn btn-default" }

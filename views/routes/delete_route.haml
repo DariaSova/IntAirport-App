@@ -1,0 +1,9 @@
+%h3 Delete a route
+%p
+  Please enter your data below
+  %form.form-container.form-inline{ action: "/show-delete-route", method: "post" }
+    %fieldset
+      .form-group
+        %label.control-label{ for: "Route num" } Route Number:
+        %input.form-control{ type: "text", name: "route_num" }
+      %input{ type: "submit", value: "Delete Route", class: "btn btn-default" }

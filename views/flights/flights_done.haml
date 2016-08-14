@@ -1,0 +1,9 @@
+%h3 Assign a flight as "done" and get the gate
+%p
+  Please enter your data below
+  %form.form-container.form-inline{ action: "/show-flight-done", method: "post" }
+    %fieldset
+      .form-group
+        %label.control-label{ for: "Arrival Id" } Flight Id:
+        %input.form-control{ type: "text", name: "id" }
+      %input{ type: "submit", value: "Arrived", class: "btn btn-default" }

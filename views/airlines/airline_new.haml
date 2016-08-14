@@ -1,0 +1,18 @@
+%h3 Add new Airline
+%p
+  Please enter your data below
+  %form.form-container.form-horizontal{ action: "/airline", method: "post" }
+    %fieldset
+      .form-group
+        %label.col-sm-2.control-label{ for: "airline" } Name:
+        .col-sm-10
+          %input.form-control{ type: "text", name: "name" }
+      .form-group
+        %label.col-sm-2.control-label{ for: "code" } Code:
+        .col-sm-10
+          %input.form-control{ type: "text", name: "code" }
+      .form-group
+        %label.col-sm-2.control-label{ for: "website", id: "website" } Website:
+        .col-sm-10
+          %input.form-control{ type: "text", name: "website" }
+      %input{ type: "submit", value: "Add Airline", class: "btn btn-default" }

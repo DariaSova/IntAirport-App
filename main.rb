@@ -1,4 +1,5 @@
 require 'sinatra' 
+require 'sinatra/content_for'
 require 'sqlite3'
 require_relative 'lib/insertions.rb'
 require_relative 'lib/other.rb'
@@ -9,43 +10,43 @@ get '/' do
 end
 
 get '/airline-new' do
-  haml :airline_new
+  haml :'airlines/airline_new'
 end
 
 post '/airline' do
-  haml :airline_added
+  haml :'airlines/airline_added'
 end
 
 get '/airline-routes' do
-  haml :airline_routes
+  haml :'airlines/airline_routes'
 end
 
 post '/show-airline-routes' do
-  haml :show_airline_routes
+  haml :'airlines/show_airline_routes'
 end
 
 get '/city-routes' do
-  haml :city_routes
+  haml :'routes/city_routes'
 end
 
 post '/show-city-routes' do
-  haml :show_city_routes
+  haml :'routes/show_city_routes'
 end
 
 get '/flight-done' do
-  haml :flights_done
+  haml :'flights/flights_done'
 end
 
 post '/show-flight-done' do
-  haml :show_flights_done
+  haml :'flights/show_flights_done'
 end
 
 get '/flight-passengers' do
-  haml :flight_passengers
+  haml :'flights/flight_passengers'
 end
 
 post '/show-flight-passengers' do
-  haml :show_flight_passengers
+  haml :'flights/show_flight_passengers'
 end
 
 post '/free-gate' do
@@ -65,33 +66,33 @@ post '/show-passenger-baggage' do
 end
 
 get '/time-flights' do
-  haml :time_flights
+  haml :'flights/time_flights'
 end
 
 post '/show-time-flights' do
-  haml :show_time_flights
+  haml :'flights/show_time_flights'
 end
 
 get '/route-new' do
-  haml :route_new
+  haml :'routes/route_new'
 end
 
 post '/route' do
-  haml :route_added
+  haml :'routes/route_added'
 end
 
 get '/flight-new' do
-  haml :flight_new
+  haml :'flights/flight_new'
 end
 
 post '/flight' do
-  haml :flight_added
+  haml :'flights/flight_added'
 end
 
 get '/delete-route' do
-  haml :delete_route
+  haml :'routes/delete_route'
 end
 
 post '/show-delete-route' do
-  haml :show_delete_route
+  haml :'routes/show_delete_route'
 end

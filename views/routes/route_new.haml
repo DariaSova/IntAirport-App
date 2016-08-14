@@ -1,0 +1,30 @@
+%h3 Add new Route
+%p
+  Please enter your data below
+%form.form-container.form-horizontal{ action: "/route", method: "post" }
+  %fieldset
+    .form-group
+      %label.col-sm-2.control-label{ for: "IncomingRoutes or OutgoingRoutes" } Type:
+      .col-sm-10
+        %input.form-control{ type: "text", name: "type" }
+    .form-group
+      %label.col-sm-2.control-label{ for: "Route Number" } Route_num:
+      .col-sm-10
+        %input.form-control{ type: "text", name: "route_num" }
+    .form-group
+      %label.col-sm-2.control-label{ for: "Plane Model" } Model:
+      .col-sm-10
+        %input.form-control{ type: "text", name: "model" }
+    .form-group
+      %label.col-sm-2.control-label{ for: "Airline Code" } Code:
+      .col-sm-10
+        %input.form-control{ type: "text", name: "code" }
+    .form-group
+      %label.col-sm-2.control-label{ for: "City" } City:
+      .col-sm-10
+        %input.form-control{ type: "text", name: "city" }
+    .form-group
+      %label.col-sm-2.control-label{ for: "Time" } Time:
+      .col-sm-10
+        %input.form-control{ type: "text", name: "time" }
+    %input{ type: "submit", value: "Add Route", class: "btn btn-default" }

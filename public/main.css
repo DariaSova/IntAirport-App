@@ -1,17 +1,20 @@
-body{
-  background-image: url('../images/airplane.jpg');
-  background-opacity: 0.9;
-  background-size: cover;
-}
-
 #header {
   top: 10%;
   position: relative;
   font-size: 250%;
+  text-align: center;
 }
 
 #content {
   position: relative;
-  width: 80%;
-  left: 3%;
+  width: 90%;
+  left: 5%;
+}
+
+.form-container {
+  width: 45%;
+}
+
+.logo {
+  width: 100px;
 }
